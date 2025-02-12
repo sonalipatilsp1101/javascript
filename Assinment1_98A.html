@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: #333;
+            
+            color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 0.5rem;
+            font-size: 2.5rem;
+
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            margin: 2rem 0;
+        }
+
+        .section-title {
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            color: #007BFF;
+            border-bottom: 2px solid #007BFF;
+            display: inline-block;
+        }
+
+        .skills, .education {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill, .edu{
+            background: #f4f4f4;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form input, .contact-form textarea {
+            margin-bottom: 1rem;
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            padding: 0.8rem;
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background: #0056b3;
+        }
+        .edu:hover {
+            background-color:#D3D3D3 ;
+            font-size: 18px;
+        }
+        .skill:hover {
+            background-color:#D3D3D3 ;
+            font-size: 18px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: #333;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="profile">
+    <img id="profileImage" alt="Profile Image" width="150" height="150">
+  </div>
+        <script>
+            const profileImg = document.getElementById('profileImage');
+             profileImg.src = 'C:/Users/HP/Desktop/photos/sonali/IMG-20231019-WA0022.jpg';
+         </script>
+
+    <h1>SONALI PATIL</h1>
+        <p>Web Developer | Designer | Problem Solver</p>
+    </header>
+
+    <div class="container">
+        <section id="about">
+            <h2 class="section-title">About Me</h2>
+            <p>
+                Computer Science student.I consider myself a responsible and orderly person.I am looking forward tomy first work experience..
+                I specialize in front-end development, delivering engaging user experiences.
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills">
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">Python</div>
+            </div>
+        </section>
+
+        <section id="education">
+            <h1 class="section-title">Education</h1>
+            <div class="education">
+                <div class="edu"><strong>Graduation:</strong>DYPATIL Education society Kolhapur.</div>
+                <div class="edu"><strong>12Th:</strong>Karmveer Hire Mahavidhyalay Gargoti.<br>with<b>Grade 60%</b></div>
+                <div class="edu"><strong>10Th:</strong>Gargoti Highschool Gargoti.<br>with<b>Grade 82%</b></div>
+                </div>
+        </section>
+        <section id="contact">
+            <h2 class="section-title">Contact</h2>
+            <form class="contact-form">
+                <button type="button" onclick="handleSubmit()">Send Message</button>
+            </form> 
+        </section>
+        
+        <script>
+            function handleSubmit() {
+                let name = prompt("Enter your Name:");
+                let profession = prompt("Enter your Profession:");
+                let email = prompt("Enter your Email:");
+                let message = prompt("Enter your Message:");
+        
+                if (!name || !profession || !email || !message) {
+                    alert("All fields are required!");
+                    return;
+                }
+        
+                console.log("User Details:", { name, profession, email, message });
+        
+                alert(`Thank you, ${name}! We will get in touch with you soon.\n\nYour Details:\nName: ${name}\nProfession: ${profession}\nEmail: ${email}\nMessage: ${message}`);
+            }
+        </script>
+        
+
+</body>
+</html>
